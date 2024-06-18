@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="getData" name="info">Get Data</button>
+    <div>
+       <% if(locals.data){%>
+        <h1><%= data.time.updateduk%></h1>
+        <p><%= data.chartName%></p>
+        <p><%= data.disclaimer %></p>
+        <p>rate : <%= data.bpi.USD.code%> <%=data.bpi.USD.rate %></p>
+       <%} else{%>
+            <p><%= error.message%></p>
+       <%}%>
+       
+
+    </div>
+</body>
+</html>
