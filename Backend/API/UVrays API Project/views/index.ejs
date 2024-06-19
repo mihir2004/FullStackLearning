@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+      <% if(locals.content){%>
+        <div class="response-area">
+          <p>
+            <%= content%>
+          </p>
+      <%} else{%>
+          <p>Error</p>
+      <%}%>
+        </div>
+        <form id="myForm" method="post">
+          <label for="LatInput">Latitude</label>
+          <input type="text" id="LatInput" name="Latitude">
+    
+          <label for="LongInput">Longitude</label>
+          <input type="text" id="LongInput" name="Longitude">
+    
+          <label for="AltiInput">Altitude</label>
+          <input type="number" id="scoreInput" name="Altitude">
+          <label for="DateTime">Date&Time</label>
+          <input type="datetime-local" id="dataTimeInput" name="dateTime">
+    
+          <label for="submit">Route:</label>
+          <input id="get" type="submit" value="GET" formaction="/get-uv">
+          <input id="post" type="submit" value="FORCAST" formaction="/get-forcast">
+          <input id="put" type="submit" value="STATS" formaction="/get-stat">
+          <input id="patch" type="submit" value="STATUS" formaction="/get-status">
+          <input id="delete" type="submit" value="DELETE" formaction="/delete-uv">
+        </form>
+      </div>
+    
+</body>
+</html>
