@@ -14,6 +14,7 @@ let user = [
         createdat: new Date(),
     }
 ]
+let post = [];
 
 
 app.use(bodyParser.json());
@@ -37,9 +38,16 @@ app.post("/newuser",(req,res)=>{
     res.status(201).json(newUser.username);
 })
 
-app.put("/user/:id",(req,res)=>{
-    const userID = req.params.id;
-    const userData = 
+app.post("/newpost",(req,res)=>{
+    const newID = post.length+1;
+    const newPost = {
+        id: newID,
+        image: req.body.image,
+        caption: req.body.caption,
+        time: new Date(),
+    }
+    post.push(newPost);
+    res.status(201).json(newPost);
 })
 
 

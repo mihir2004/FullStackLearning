@@ -44,7 +44,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/posts", (req,res)=>{
   res.json(posts);
 })
-
+  
 //CHALLENGE 2: GET a specific post by id
 app.get("/posts/:id",(req,res)=>{
   const id = parseInt(req.params.id);
