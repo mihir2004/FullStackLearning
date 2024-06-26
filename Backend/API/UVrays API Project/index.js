@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 const API_URL = "https://api.openuv.io/api/v1";
 
-const API_key = "openuv-dis23rlxln0e2o-io";
+const API_key = "";
 const config = {
     headers : { "x-access-token" : API_key},
 };
