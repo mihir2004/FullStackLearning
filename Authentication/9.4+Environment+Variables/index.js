@@ -14,17 +14,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 const db = new pg.Client({
-  user:"postgres",
-  host:"localhost",
-  database:"secrets",
-  password:"Mihir@2004",
+  user:"",
+  host:"",
+  database:"",
+  password:"",
   port: 5432
 });
 db.connect();
 
 
 app.use(session({
-  secret: "hdfjwdhsuhdcjdhus",
+  secret: "",
   resave:false,
   saveUninitialized:true
 }));
