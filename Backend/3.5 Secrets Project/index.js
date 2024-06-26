@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 function passwordAuth(req,res,next){
     console.log(req.body);
     const password = req.body["password"];
-    if(password === "Mihir@2004"){
+    if(password === ""){
         userIdAuth = true;
     }
     next();
